@@ -1,0 +1,13 @@
+### Login request to get the token
+### The database has encrypted version of this password
+### Gets the token from the reponse of this request and set to a global variable in intellij setup
+
+POST http://localhost:4005/login
+Content-Type: application/json
+
+{
+  "email" : "testuser@test.com",
+  "password": "password123"
+}
+
+> {% client.global.set("token", response.body.token) %}
