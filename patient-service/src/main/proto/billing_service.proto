@@ -1,0 +1,28 @@
+// Specify that we are using proto3 syntax.
+syntax = "proto3";
+
+// Options for Java code generation:
+// Generate separate Java files for each message/service
+option java_multiple_files = true;
+// Set the Java package where the generated files will be placed.
+option java_package = "billing";
+
+// Define the gRPC service for billing operations.
+service BillingService {
+  // RPC method to create a billing account:
+  // It takes a BillingRequest and returns a BillingResponse.
+  rpc CreateBillingAccount (BillingRequest) returns (BillingResponse);
+}
+
+// Message sent when creating a billing account.
+message BillingRequest {
+  string patientId = 1; // Patient's unique ID.
+  string name = 2;      // Patient's name.
+  string email = 3;     // Patient's email address.
+}
+
+// Message received as the response after account creation.
+message BillingResponse {
+  string accountId = 1; // Unique billing account ID.
+  string status = 2;    // Status of the account creation.
+}
