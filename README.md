@@ -1,2 +1,2 @@
 # Patient-Management-System-using-java-microservices
-This comprehensive Patient Management System is a production-grade, microservices-based application that demonstrates cutting-edge backend engineering principles. Modular, scalable, and cloud-deployable, it covers the full development lifecycle—from local setup to AWS deployment using Infrastructure as Code.
+This production-ready Patient Management System leverages a microservices architecture to showcase modern backend engineering best practices. Designed for modularity and scalability, it smoothly transitions from local development environments to cloud deployments on AWS using Infrastructure as Code.
